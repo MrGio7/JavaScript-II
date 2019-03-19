@@ -97,5 +97,21 @@ let mediumShirtsDonations = mediumShirts.reduce(function(o, i){
 console.log(mediumShirtsDonations)
 
 // Problem 2
+// we need mails of >200 donations
+let topDonat = runners.filter(function(i){ 
+    return i.donation > 200;
+});
 
+let topDonatMail = topDonat.map(function(i){ 
+    return i.email;
+});
+
+console.log(topDonatMail)
 // Problem 3
+// we need large shirt owner names
+
+let largeShirtsNames = largeShirts.map(function(i){
+    return i.first_name + ' ' + i.last_name;
+})
+
+console.log(largeShirtsNames)
